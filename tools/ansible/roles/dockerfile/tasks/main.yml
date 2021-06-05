@@ -17,3 +17,9 @@
   template:
     src: Dockerfile.j2
     dest: "{{ dockerfile_dest }}/{{ dockerfile_name }}"
+
+- name: Add mount_helper in Dockerfile
+  replace:
+      path: "{{ dockerfile_dest }}/{{ dockerfile_name }}"
+      regexp: '^#mount_helper'
+      replace: '\1'
