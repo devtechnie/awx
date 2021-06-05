@@ -9,6 +9,7 @@ EOF
 
 cat <<EOF >> /etc/group
 awx:x:`id -u`:awx
+nginx:x:994:994:,,,:/var/lib/awx:/bin/bash
 EOF
 
 cat <<EOF > /etc/subuid
