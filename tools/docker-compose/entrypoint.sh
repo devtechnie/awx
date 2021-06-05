@@ -5,11 +5,11 @@ if [ `id -u` -ge 500 ] || [ -z "${CURRENT_UID}" ]; then
 cat << EOF > /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 awx:x:`id -u`:`id -g`:,,,:/var/lib/awx:/bin/bash
+nginx:x:994:994:,,,:/var/lib/awx:/bin/bash
 EOF
 
 cat <<EOF >> /etc/group
 awx:x:`id -u`:awx
-nginx:x:994:994:,,,:/var/lib/awx:/bin/bash
 EOF
 
 cat <<EOF > /etc/subuid
