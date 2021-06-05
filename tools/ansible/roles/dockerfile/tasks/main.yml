@@ -21,5 +21,10 @@
 - name: Add mount_helper in Dockerfile
   replace:
       path: "{{ dockerfile_dest }}/{{ dockerfile_name }}"
+<<<<<<< HEAD
       regexp: '#mount_helper'
       replace: 'mount_helper'
+=======
+      regexp: '^#mount_helper'
+      replace: '\1'
+>>>>>>> 75fcb8ac053f655e61d2e236051d31cd51886554
